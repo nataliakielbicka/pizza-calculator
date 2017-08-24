@@ -1,0 +1,33 @@
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.value-container {
+    display: none;
+}
+
+.value-container.is-active {
+    display: block;
+}
+
+body {
+    background-color: teal;
+}
+
+.container {
+    background-color: #fff;
+    display: block;
+    max-width: 500px;
+    padding: 20px;
+}
+
+.input {
+    clear: both;
+    display: block;
+}
+
+label,
+input[type="text"],
+select {
+    width: 100%;
+}
