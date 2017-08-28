@@ -11,7 +11,6 @@ html {
 }
 
 body {
-    background-color: teal;
     font-family: 'Sniglet', sans-serif;
     width: 100%;
     margin: 0 !important;
@@ -28,9 +27,7 @@ body {
 }
 
 .container {
-    background-color: #fff;
-    display: block;
-    max-width: 1000px;
+    max-width: 500px;
     padding: 20px;
 }
 
@@ -52,11 +49,14 @@ input[type="text"] {
     height: 30px;
 }
 
-label,
 legend {
     display: block;
     font-size: 25px;
     margin: 10px 0;
+}
+
+label {
+    font-size: 20px;
 }
 
 [type="radio"]:checked,

@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Pizza real-time calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Sniglet" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.min.css">
 </head>
 
@@ -124,35 +126,36 @@
             </div>
         </form>
 
-        <div class="summary">
-            <div id="pizza" class="value-container">
-                <strong>Pizza:</strong> $<span id="pizzaprice">0</span>.00
-            </div>
-            <div id="dough" class="value-container">
-                <strong>Dough:</strong> $<span id="doughprice">0</span>.00<br>
-            </div>
-            <div id="toppings-wrapper" class="value-container">
-                <strong>Toppings:</strong> $<span id="toppingsprice">0</span>.00<br>
-            </div>
-            <div id="extra-wrapper" class="value-container">
-                <strong>Extra toppings:</strong> $<span id="extraprice">0</span>.00<br>
-            </div>
-            <div id="drinks" class="value-container is-active">
-                <strong>Drinks:</strong> $<span id="drinksprice">0</span>.00<br>
-            </div>
-            <div id="shipping-container" class="value-container">
-                <strong>Shipping:</strong> $<span id="shippingprice">0</span>.00<br>
-            </div>
-            <div id="destination" class="value-container">
-                <strong>Destination:</strong> $<span id="destprice">0</span>.00<br>
-            </div>
 
-            <div id="express" class="value-container">
-                <strong>Express shipping:</strong> $<span id="expressprice">0</span>.00<br>
-            </div>
-            <hr>
-            <strong>result:</strong> $<span id="result">0</span>.00<br>
+    </div>
+    <div class="summary">
+        <div id="pizza" class="value-container">
+            <strong>Pizza:</strong> $<span id="pizzaprice">0</span>.00
         </div>
+        <div id="dough" class="value-container">
+            <strong>Dough:</strong> $<span id="doughprice">0</span>.00<br>
+        </div>
+        <div id="toppings-wrapper" class="value-container">
+            <strong>Toppings:</strong> $<span id="toppingsprice">0</span>.00<br>
+        </div>
+        <div id="extra-wrapper" class="value-container">
+            <strong>Extra toppings:</strong> $<span id="extraprice">0</span>.00<br>
+        </div>
+        <div id="drinks" class="value-container is-active">
+            <strong>Drinks:</strong> $<span id="drinksprice">0</span>.00<br>
+        </div>
+        <div id="shipping-container" class="value-container">
+            <strong>Shipping:</strong> $<span id="shippingprice">0</span>.00<br>
+        </div>
+        <div id="destination" class="value-container">
+            <strong>Destination:</strong> $<span id="destprice">0</span>.00<br>
+        </div>
+
+        <div id="express" class="value-container">
+            <strong>Express shipping:</strong> $<span id="expressprice">0</span>.00<br>
+        </div>
+        <hr>
+        <strong>result:</strong> $<span id="result">0</span>.00<br>
     </div>
 
     <script src="js/app.js"></script>
