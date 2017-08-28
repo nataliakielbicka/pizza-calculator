@@ -22,6 +22,9 @@ body {
     margin: 0 !important;
     padding: 0 !important;
     overflow-x: hidden;
+    @media all and (max-width: 500px) {
+        padding: 0 0 40px 0 !important;
+    }
 }
 
 .value-container {
@@ -54,6 +57,18 @@ h2 {
     max-width: 500px;
     margin: 0 0 5% 15%;
     padding: 20px;
+    @media all and (max-width: 1500px) {
+        margin: 0 0 5% 5%;
+    }
+    @media all and (max-width: 1199px) {
+        margin: 0 0 5% 4%;
+    }
+    @media all and (max-width: 991px) {
+        max-width: 50%;
+    }
+    @media all and (max-width: 500px) {
+        max-width: 92%;
+    }
 }
 
 .input {
@@ -305,6 +320,22 @@ select {
     padding: 20px;
     box-shadow: 1px 1px 20px #888;
     border-radius: 6px;
+    @media all and (max-width: 1199px) {
+        right: 4%;
+    }
+    @media all and (max-width: 991px) {
+        top: 30%;
+        font-size: 1.2em;
+    }
+    @media all and (max-width: 500px) {
+        max-width: 100%;
+        position: relative;
+        top: auto;
+        right: auto;
+        left: 4%;
+        width: 92%;
+        transform: none;
+    }
     >strong {
         font-weight: bold;
         margin: 0 15px 0 0;

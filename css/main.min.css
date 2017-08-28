@@ -20,6 +20,10 @@ body {
   padding: 0 !important;
   overflow-x: hidden; }
 
+@media all and (max-width: 500px) {
+  body {
+    padding: 0 0 40px 0 !important; } }
+
 .value-container {
   display: none; }
 
@@ -47,6 +51,22 @@ h2 {
   max-width: 500px;
   margin: 0 0 5% 15%;
   padding: 20px; }
+
+@media all and (max-width: 1500px) {
+  .container {
+    margin: 0 0 5% 5%; } }
+
+@media all and (max-width: 1199px) {
+  .container {
+    margin: 0 0 5% 4%; } }
+
+@media all and (max-width: 991px) {
+  .container {
+    max-width: 50%; } }
+
+@media all and (max-width: 500px) {
+  .container {
+    max-width: 92%; } }
 
 .input {
   clear: both;
@@ -252,6 +272,25 @@ select {
   padding: 20px;
   box-shadow: 1px 1px 20px #888;
   border-radius: 6px; }
+
+@media all and (max-width: 1199px) {
+  .summary {
+    right: 4%; } }
+
+@media all and (max-width: 991px) {
+  .summary {
+    top: 30%;
+    font-size: 1.2em; } }
+
+@media all and (max-width: 500px) {
+  .summary {
+    max-width: 100%;
+    position: relative;
+    top: auto;
+    right: auto;
+    left: 4%;
+    width: 92%;
+    transform: none; } }
 
 .summary > strong {
   font-weight: bold;
