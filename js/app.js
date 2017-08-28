@@ -1,15 +1,15 @@
 (function() {
     "use strict";
-    var size = document.getElementById("size"),
-        thick = document.getElementById("thick"),
-        amount = document.getElementById("amount"),
-        toppings = document.getElementById("toppings"),
-        extra = document.getElementById("extra"),
-        drink = document.getElementsByClassName("drink"),
-        shippYes = document.getElementById("yes"),
-        dest = document.getElementById("dest"),
-        hungry = document.getElementById("hungry"),
-        result = document.getElementById("result");
+    var size = document.getElementById("size");
+    var thick = document.getElementById("thick");
+    var amount = document.getElementById("amount");
+    var toppings = document.getElementById("toppings");
+    var extra = document.getElementById("extra");
+    var drink = document.getElementsByClassName("drink");
+    var shippYes = document.getElementById("yes");
+    var dest = document.getElementById("dest");
+    var hungry = document.getElementById("hungry");
+    var result = document.getElementById("result");
 
     // function isNumeric(n) {
     //     return !isNaN(parseFloat(n)) && isFinite(n);
@@ -25,27 +25,27 @@
     }
 
     function calculateResult() {
-        var sizeVal = size.options[size.selectedIndex].value,
-            doughWrap = document.getElementById("dough-wrapper"),
-            doughElem = doughWrap.getElementsByTagName("input"),
-            shipWrap = document.getElementById("shipping-wrapper"),
-            shipElem = shipWrap.getElementsByTagName("input"),
-            pizzaprice = document.getElementById("pizzaprice"),
-            pizza = document.getElementById("pizza"),
-            doughprice = document.getElementById("doughprice"),
-            dough = document.getElementById("dough"),
-            toppingsprice = document.getElementById("toppingsprice"),
-            toppingsWrapper = document.getElementById("toppings-wrapper"),
-            extraprice = document.getElementById("extraprice"),
-            extraWrapper = document.getElementById("extra-wrapper"),
-            drinksprice = document.getElementById("drinksprice"),
-            drinks2 = document.getElementById("drinks"),
-            shippingprice = document.getElementById("shippingprice"),
-            shippingCont = document.getElementById("shipping-container"),
-            destprice = document.getElementById("destprice"),
-            destination = document.getElementById("destination"),
-            expressprice = document.getElementById("expressprice"),
-            express = document.getElementById("express");
+        var sizeVal = size.options[size.selectedIndex].value;
+        var doughWrap = document.getElementById("dough-wrapper");
+        var doughElem = doughWrap.getElementsByTagName("input");
+        var shipWrap = document.getElementById("shipping-wrapper");
+        var shipElem = shipWrap.getElementsByTagName("input");
+        var pizzaprice = document.getElementById("pizzaprice");
+        var pizza = document.getElementById("pizza");
+        var doughprice = document.getElementById("doughprice");
+        var dough = document.getElementById("dough");
+        var toppingsprice = document.getElementById("toppingsprice");
+        var toppingsWrapper = document.getElementById("toppings-wrapper");
+        var extraprice = document.getElementById("extraprice");
+        var extraWrapper = document.getElementById("extra-wrapper");
+        var drinksprice = document.getElementById("drinksprice");
+        var drinks2 = document.getElementById("drinks");
+        var shippingprice = document.getElementById("shippingprice");
+        var shippingCont = document.getElementById("shipping-container");
+        var destprice = document.getElementById("destprice");
+        var destination = document.getElementById("destination");
+        var expressprice = document.getElementById("expressprice");
+        var express = document.getElementById("express");
 
         //size
         if (sizeVal > 0) {
