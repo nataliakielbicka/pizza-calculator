@@ -111,6 +111,10 @@ label {
   height: 30px;
   line-height: 30px; }
 
+fieldset {
+  border: none;
+  padding: 0; }
+
 fieldset p {
   margin: 10px;
   float: left; }
