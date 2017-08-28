@@ -24,12 +24,7 @@
         }
     }
 
-    //function isChecked() {
-
-    //}
-
-
-    document.body.addEventListener("change", function() {
+    function calculateResult() {
         var sizeVal = size.options[size.selectedIndex].value,
             doughWrap = document.getElementById("dough-wrapper"),
             doughElem = doughWrap.getElementsByTagName("input"),
@@ -130,16 +125,13 @@
         //fast shipping - hungry
         isActiveChecked('hungry', 5, "expressprice", "express");
 
-
         result.innerHTML = +(sizeVal * amount.value) + +count + +count2 + (extra.value ? 5 : 0) + +(shippYes.checked ? 5 : 0) + +destVal + +(hungry.checked ? 5 : 0);
+    }
 
-
-        // isChecked();
+    document.body.addEventListener("change", function() {
+        calculateResult();
     });
 
-    //window.onload = load;
+    //window.onload = calculateResult;
 
-    // function load() {
-
-    // }
 }());
