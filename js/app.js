@@ -11,6 +11,10 @@
         hungry = document.getElementById("hungry"),
         result = document.getElementById("result");
 
+    // function isNumeric(n) {
+    //     return !isNaN(parseFloat(n)) && isFinite(n);
+    // }
+
     function isActiveChecked(item, val, container, contValue) {
         if (document.getElementById(item).checked) {
             document.getElementById(contValue).classList.add("is-active");
@@ -128,6 +132,6 @@
         calculateResult();
     });
 
-    window.onload = calculateResult;
+    //window.onload = calculateResult;
 
 }());
