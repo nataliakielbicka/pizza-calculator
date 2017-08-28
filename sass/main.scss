@@ -3,6 +3,7 @@
     box-sizing: border-box;
 }
 
+$color: #DF644A;
 html {
     margin: 0 !important;
     padding: 0 !important;
@@ -11,6 +12,11 @@ html {
 }
 
 body {
+    background-image: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: top 32% center;
+    background-size: cover;
+    color: #222;
     font-family: 'Sniglet', sans-serif;
     width: 100%;
     margin: 0 !important;
@@ -20,14 +26,33 @@ body {
 
 .value-container {
     display: none;
+    strong {
+        font-weight: bold;
+        margin: 0 15px 0 0;
+    }
+    span {
+        color: #567238;
+        font-size: 1.3em;
+    }
 }
 
 .value-container.is-active {
     display: block;
 }
 
+h2 {
+    font-size: 1.7em;
+    font-weight: bold;
+    margin: 30px 0;
+    text-align: center;
+}
+
 .container {
+    background-color: #fff;
+    box-shadow: 1px 1px 20px #888;
+    border-radius: 6px;
     max-width: 500px;
+    margin: 0 0 5% 15%;
     padding: 20px;
 }
 
@@ -51,12 +76,40 @@ input[type="text"] {
 
 legend {
     display: block;
-    font-size: 25px;
+    font-size: 1.2em;
     margin: 10px 0;
 }
 
 label {
-    font-size: 20px;
+    font-size: 1em;
+}
+
+.main {
+    display: block;
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.number {
+    border-radius: 50%;
+    background-color: $color;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    margin: 0 10px 0 0;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+}
+
+fieldset {
+    p {
+        margin: 10px;
+        float: left;
+        &:first-child {
+            margin-left: 0;
+        }
+    }
 }
 
 [type="radio"]:checked,
@@ -72,7 +125,6 @@ label {
     cursor: pointer;
     line-height: 20px;
     display: inline-block;
-    color: #666;
 }
 
 [type="radio"]:checked+label:before,
@@ -84,7 +136,7 @@ label {
     width: 18px;
     height: 18px;
     border: 1px solid #ddd;
-    border-radius: 100%;
+    border-radius: 50%;
     background: #fff;
 }
 
@@ -93,11 +145,11 @@ label {
     content: '';
     width: 12px;
     height: 12px;
-    background: #ffac00;
+    background: $color;
     position: absolute;
     top: 4px;
     left: 4px;
-    border-radius: 100%;
+    border-radius: 50%;
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
 }
@@ -141,7 +193,7 @@ label {
     top: 0;
     width: 1.25em;
     height: 1.25em;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
     background: #fff;
 }
 
@@ -156,7 +208,7 @@ label {
     left: .25em;
     font-size: 1em;
     line-height: 0.8;
-    color: #ff7500;
+    color: $color;
     transition: all .2s;
 }
 
@@ -213,15 +265,6 @@ select {
 }
 
 
-/* Since we removed the default focus styles, we have to add our own */
-
-.select select:focus {
-    // -webkit-box-shadow: 0 0 3px 1px #c00;
-    // -moz-box-shadow: 0 0 3px 1px #c00;
-    // box-shadow: 0 0 3px 1px #c00;
-}
-
-
 /* Select arrow styling */
 
 .select:after {
@@ -233,7 +276,7 @@ select {
     font-size: 60%;
     line-height: 30px;
     padding: 0 7px;
-    background: #ff7500;
+    background: $color;
     color: white;
     pointer-events: none;
     -webkit-border-radius: 0 6px 6px 0;
@@ -243,4 +286,26 @@ select {
 
 .no-pointer-events .select:after {
     content: none;
+}
+
+.summary {
+    background-color: #fff;
+    font-size: 2em;
+    position: fixed;
+    z-index: 999;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 10%;
+    width: 40%;
+    padding: 20px;
+    box-shadow: 1px 1px 20px #888;
+    border-radius: 6px;
+    >strong {
+        font-weight: bold;
+        margin: 0 15px 0 0;
+        text-transform: uppercase;
+        +span {
+            font-size: 1.3em;
+        }
+    }
 }

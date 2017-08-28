@@ -11,13 +11,13 @@
 </head>
 
 <body>
-    <div class="container">
-        <h2>Pizza Price Real-Time Calculator</h2>
+    <h2>Pizza Price Real-Time Calculator</h2>
 
+    <div class="container">
         <form action="#">
             <div class="controls">
                 <div class="input">
-                    <label for="size">Size of pizza:</label>
+                    <label for="size" class="main"><span class="number">1</span>Size of pizza:</label>
                     <div class="select">
                         <select id="size">
                             <option value="0" selected="selected">Select size of pizza</option>
@@ -30,7 +30,7 @@
 
                 <div class="input" id="dough-wrapper">
                     <fieldset>
-                        <legend>Dough:</legend>
+                        <legend><span class="number">2</span>Dough:</legend>
                         <p>
                             <input type="radio" id="thin" name="dough" value="0">
                             <label for="thin">thin-crust pizza</label>
@@ -43,12 +43,12 @@
                 </div>
 
                 <div class="input">
-                    <label for="amount">Amount:</label>
+                    <label for="amount" class="main"><span class="number">3</span>Amount:</label>
                     <input id="amount" type="number" name="amount" value="1" min="1" required>
                 </div>
 
                 <div class="input">
-                    <label for="toppings">Toppings:</label>
+                    <label for="toppings" class="main"><span class="number">4</span>Toppings:</label>
                     <select id="toppings" multiple>
                         <option value="3">pepperoni</option>
                         <option value="4">mushrooms</option>
@@ -59,14 +59,13 @@
                 </div>
 
                 <div class="input">
-                    <label for="extra">Extra toppings:</label>
+                    <label for="extra" class="main"><span class="number">5</span>Extra toppings:</label>
                     <input id="extra" type="text" name="extra">
                 </div>
 
                 <div class="input">
-
                     <fieldset>
-                        <legend>Type of drinks:</legend>
+                        <legend><span class="number">6</span>Type of drinks:</legend>
                         <p>
                             <input type="checkbox" id="nodrink" name="drink" value="0" class="checkbox drink">
                             <label for="nodrink">No drink</label>
@@ -92,7 +91,7 @@
 
                 <div class="input" id="shipping-wrapper">
                     <fieldset>
-                        <legend>Shipping:</legend>
+                        <legend><span class="number">7</span>Shipping:</legend>
                         <p>
                             <input type="radio" id="yes" name="shipping">
                             <label for="yes">yes</label>
@@ -105,22 +104,25 @@
                 </div>
 
                 <div class="input">
-                    <label for="dest">Destination:</label>
+                    <label for="dest" class="main"><span class="number">8</span>Destination:</label>
                     <div class="select">
                         <select id="dest">
-                        <option value="" selected="selected">how far?</option>
-                        <option value="0">city - free!</option>
-                        <option value="5">up to 20km</option>
-                        <option value="10">more than 20km</option>
-                    </select>
+                            <option value="" selected="selected">how far?</option>
+                            <option value="0">city - free!</option>
+                            <option value="5">up to 20km</option>
+                            <option value="10">more than 20km</option>
+                        </select>
                     </div>
                 </div>
 
                 <div class="input">
-                    <p>
-                        <input type="checkbox" id="hungry" name="hungry" value="5" class="checkbox">
-                        <label for="hungry">I'm really hungry! Please, make my pizza ASAP!</label>
-                    </p>
+                    <fieldset>
+                        <legend><span class="number">9</span>Are you very hungry? :)</legend>
+                        <p>
+                            <input type="checkbox" id="hungry" name="hungry" value="5" class="checkbox">
+                            <label for="hungry">I'm really hungry! Please, make my pizza ASAP!</label>
+                        </p>
+                    </fieldset>
                 </div>
 
             </div>
@@ -148,7 +150,7 @@
             <strong>Shipping:</strong> $<span id="shippingprice">0</span>.00<br>
         </div>
         <div id="destination" class="value-container">
-            <strong>Destination:</strong> $<span id="destprice">0</span>.00<br>
+            <strong>Total shipping:</strong> $<span id="destprice">0</span>.00<br>
         </div>
 
         <div id="express" class="value-container">
