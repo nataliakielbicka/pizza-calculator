@@ -60,12 +60,30 @@
                 </div>
 
                 <div class="input">
-                    <label for="drinks">Type of drinks:</label>
-                    <input type="checkbox" name="drink" value="0" class="checkbox drink"> No drink<br>
-                    <input type="checkbox" name="drink" value="2" class="checkbox drink"> Cola<br>
-                    <input type="checkbox" name="drink" value="3" class="checkbox drink"> Lemon Soda<br>
-                    <input type="checkbox" name="drink" value="4" class="checkbox drink"> Grape Soda<br>
-                    <input type="checkbox" name="drink" value="5" class="checkbox drink"> Fruit Punch
+
+                    <fieldset>
+                        <legend>Type of drinks:</legend>
+                        <p>
+                            <input type="checkbox" id="nodrink" name="drink" value="0" class="checkbox drink">
+                            <label for="nodrink">No drink</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" id="cola" name="drink" value="2" class="checkbox drink">
+                            <label for="cola">Cola</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" id="lemon" name="drink" value="3" class="checkbox drink">
+                            <label for="lemon">Lemon Soda</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" id="grape" name="drink" value="4" class="checkbox drink">
+                            <label for="grape">Grape Soda</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" id="punch" name="drink" value="5" class="checkbox drink">
+                            <label for="punch">Fruit Punch</label>
+                        </p>
+                    </fieldset>
                 </div>
 
                 <div class="input" id="shipping-wrapper">
@@ -80,9 +98,6 @@
                             <label for="no">no</label>
                         </p>
                     </fieldset>
-                    <!--<label for="shipping"></label>
-                    <input type="radio" id="yes" name="shipping"> yes<br>
-                    <input type="radio" name="shipping"> no-->
                 </div>
 
                 <div class="input">
