@@ -12,74 +12,95 @@
     <div class="container">
         <h2>Pizza Price Real-Time Calculator</h2>
 
-        <div class="controls">
-            <div class="input">
-                <label for="size">Size of pizza:</label>
-                <select id="size">
+        <form action="#">
+            <div class="controls">
+                <div class="input">
+                    <label for="size">Size of pizza:</label>
+                    <select id="size">
                     <option value="0" selected="selected">Select size of pizza</option>
                     <option value="13">Small</option>
                     <option value="20">Medium</option>
                     <option value="28">Big</option>
                 </select>
-            </div>
+                </div>
 
-            <div class="input" id="dough-wrapper">
-                <label for="dough">Dough:</label>
-                <input type="radio" name="dough" value="0"> thin-crust pizza<br>
-                <input type="radio" name="dough" value="4"> thick-crust pizza
-            </div>
+                <div class="input" id="dough-wrapper">
+                    <fieldset>
+                        <legend>Dough:</legend>
+                        <p>
+                            <input type="radio" id="thin" name="dough" value="0">
+                            <label for="thin">thin-crust pizza</label>
+                        </p>
+                        <p>
+                            <input type="radio" id="thick" name="dough" value="4">
+                            <label for="thick">thick-crust pizza</label>
+                        </p>
+                    </fieldset>
+                </div>
 
-            <div class="input">
-                <label for="amount">Amount:</label>
-                <input id="amount" type="number" name="amount" value="1" min="1" required>
-            </div>
+                <div class="input">
+                    <label for="amount">Amount:</label>
+                    <input id="amount" type="number" name="amount" value="1" min="1" required>
+                </div>
 
-            <div class="input">
-                <label for="toppings">Toppings:</label>
-                <select id="toppings" multiple>
+                <div class="input">
+                    <label for="toppings">Toppings:</label>
+                    <select id="toppings" multiple>
                     <option value="3">pepperoni</option>
                     <option value="4">mushrooms</option>
                     <option value="3">onion</option>
                     <option value="3">sausage</option>
                     <option value="5">extra cheese</option>
                 </select>
-            </div>
+                </div>
 
-            <div class="input">
-                <label for="extra">Extra toppings:</label>
-                <input id="extra" type="text" name="extra">
-            </div>
+                <div class="input">
+                    <label for="extra">Extra toppings:</label>
+                    <input id="extra" type="text" name="extra">
+                </div>
 
-            <div class="input">
-                <label for="drinks">Type of drinks:</label>
-                <input type="checkbox" name="drink" value="0" class="checkbox drink"> No drink<br>
-                <input type="checkbox" name="drink" value="2" class="checkbox drink"> Cola<br>
-                <input type="checkbox" name="drink" value="3" class="checkbox drink"> Lemon Soda<br>
-                <input type="checkbox" name="drink" value="4" class="checkbox drink"> Grape Soda<br>
-                <input type="checkbox" name="drink" value="5" class="checkbox drink"> Fruit Punch
-            </div>
+                <div class="input">
+                    <label for="drinks">Type of drinks:</label>
+                    <input type="checkbox" name="drink" value="0" class="checkbox drink"> No drink<br>
+                    <input type="checkbox" name="drink" value="2" class="checkbox drink"> Cola<br>
+                    <input type="checkbox" name="drink" value="3" class="checkbox drink"> Lemon Soda<br>
+                    <input type="checkbox" name="drink" value="4" class="checkbox drink"> Grape Soda<br>
+                    <input type="checkbox" name="drink" value="5" class="checkbox drink"> Fruit Punch
+                </div>
 
-            <div class="input" id="shipping-wrapper">
-                <label for="shipping">Shipping:</label>
-                <input type="radio" id="yes" name="shipping"> yes<br>
-                <input type="radio" name="shipping"> no
-            </div>
+                <div class="input" id="shipping-wrapper">
+                    <fieldset>
+                        <legend>Shipping:</legend>
+                        <p>
+                            <input type="radio" id="yes" name="shipping">
+                            <label for="yes">yes</label>
+                        </p>
+                        <p>
+                            <input type="radio" id="no" name="shipping">
+                            <label for="no">no</label>
+                        </p>
+                    </fieldset>
+                    <!--<label for="shipping"></label>
+                    <input type="radio" id="yes" name="shipping"> yes<br>
+                    <input type="radio" name="shipping"> no-->
+                </div>
 
-            <div class="input">
-                <label for="dest">Destination:</label>
-                <select id="dest">
+                <div class="input">
+                    <label for="dest">Destination:</label>
+                    <select id="dest">
                     <option value="" selected="selected">how far?</option>
                     <option value="0">city - free!</option>
                     <option value="5">up to 20km</option>
                     <option value="10">more than 20km</option>
                 </select>
-            </div>
+                </div>
 
-            <div class="input">
-                <input type="checkbox" id="hungry" name="hungry" value="5" class="checkbox"> I'm really hungry! Please, make my pizza ASAP!
-            </div>
+                <div class="input">
+                    <input type="checkbox" id="hungry" name="hungry" value="5" class="checkbox"> I'm really hungry! Please, make my pizza ASAP!
+                </div>
 
-        </div>
+            </div>
+        </form>
 
         <div class="summary">
             <div id="pizza" class="value-container">
