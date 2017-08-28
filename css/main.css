@@ -1,5 +1,5 @@
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: 'Sniglet', cursive;
 }
 
 .value-container {
@@ -30,4 +30,9 @@ label,
 input[type="text"],
 select {
     width: 100%;
+}
+
+label {
+    display: block;
+    font-size: 25px;
 }
