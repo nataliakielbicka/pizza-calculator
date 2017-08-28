@@ -1,21 +1,13 @@
 (function() {
     "use strict";
     var size = document.getElementById("size"),
-
         thick = document.getElementById("thick"),
-
         amount = document.getElementById("amount"),
-
         toppings = document.getElementById("toppings"),
-
         extra = document.getElementById("extra"),
-
         drink = document.getElementsByClassName("drink"),
-
         shippYes = document.getElementById("yes"),
-
         dest = document.getElementById("dest"),
-
         hungry = document.getElementById("hungry"),
         result = document.getElementById("result");
 
@@ -42,27 +34,43 @@
             doughWrap = document.getElementById("dough-wrapper"),
             doughElem = doughWrap.getElementsByTagName("input"),
             shipWrap = document.getElementById("shipping-wrapper"),
-            shipElem = shipWrap.getElementsByTagName("input");
+            shipElem = shipWrap.getElementsByTagName("input"),
+            pizzaprice = document.getElementById("pizzaprice"),
+            pizza = document.getElementById("pizza"),
+            doughprice = document.getElementById("doughprice"),
+            dough = document.getElementById("dough"),
+            toppingsprice = document.getElementById("toppingsprice"),
+            toppingsWrapper = document.getElementById("toppings-wrapper"),
+            extraprice = document.getElementById("extraprice"),
+            extraWrapper = document.getElementById("extra-wrapper"),
+            drinksprice = document.getElementById("drinksprice"),
+            drinks2 = document.getElementById("drinks"),
+            shippingprice = document.getElementById("shippingprice"),
+            shippingCont = document.getElementById("shipping-container"),
+            destprice = document.getElementById("destprice"),
+            destination = document.getElementById("destination"),
+            expressprice = document.getElementById("expressprice"),
+            express = document.getElementById("express");
 
         //size
         if (sizeVal > 0) {
             if (amount.value) {
-                document.getElementById("pizzaprice").innerHTML = sizeVal * amount.value;
+                pizzaprice.innerHTML = sizeVal * amount.value;
             } else {
-                document.getElementById("pizzaprice").innerHTML = sizeVal;
+                pizzaprice.innerHTML = sizeVal;
             }
-            document.getElementById("pizza").classList.add("is-active");
+            pizza.classList.add("is-active");
         } else {
-            document.getElementById("pizza").classList.remove("is-active");
+            pizza.classList.remove("is-active");
         }
 
         //dough
         for (var i = 0; i < doughElem.length; i++) {
             if (doughElem[i].checked) {
-                document.getElementById("doughprice").innerHTML = doughElem[i].value;
-                document.getElementById("dough").classList.add("is-active");
+                doughprice.innerHTML = doughElem[i].value;
+                dough.classList.add("is-active");
             } else {
-                document.getElementById("dough").classList.remove("is-active");
+                dough.classList.remove("is-active");
             }
         }
 
@@ -75,19 +83,19 @@
             }
         }
         if (options[0].selected || options[1].selected || options[2].selected || options[3].selected || options[4].selected) {
-            document.getElementById("toppingsprice").innerHTML = count;
-            document.getElementById("toppings-wrapper").classList.add("is-active");
+            toppingsprice.innerHTML = count;
+            toppingsWrapper.classList.add("is-active");
         } else {
-            document.getElementById("toppings-wrapper").classList.remove("is-active");
+            toppingsWrapper.classList.remove("is-active");
         }
 
         //extra
         if (extra.value) {
-            document.getElementById("extraprice").innerHTML = 5;
-            document.getElementById("extra-wrapper").classList.add("is-active");
+            extraprice.innerHTML = 5;
+            extraWrapper.classList.add("is-active");
 
         } else {
-            document.getElementById("extra-wrapper").classList.remove("is-active");
+            extraWrapper.classList.remove("is-active");
         }
 
         //drinks does not work
@@ -101,15 +109,14 @@
         }
         if (drinks[0].checked || drinks[1].checked || drinks[2].checked || drinks[3].checked || drinks[4].checked) {
             //console.log(drinks[0].checked)
-            document.getElementById("drinksprice").innerHTML = count2;
-            document.getElementById("drinks").classList.add("is-active");
+            drinksprice.innerHTML = count2;
+            drinks2.classList.add("is-active");
         } else {
-            document.getElementById("drinks").classList.remove("is-active");
+            drinks2.classList.remove("is-active");
         }
 
         //shipping
         if (shippYes.checked) {
-            //console.log(document.getElementById("shipping-wrapper"))
             document.getElementById("shippingprice").innerHTML = 1;
             document.getElementById("shipping-container").classList.add("is-active");
         } else {
@@ -120,18 +127,18 @@
         var destVal = dest.options[dest.selectedIndex].value;
 
         if (destVal) {
-            document.getElementById("destprice").innerHTML = destVal;
-            document.getElementById("destination").classList.add("is-active");
+            destprice.innerHTML = destVal;
+            destination.classList.add("is-active");
         } else {
-            document.getElementById("destination").classList.remove("is-active");
+            destination.classList.remove("is-active");
         }
 
         //fast shipping - hungry
         if (hungry.checked) {
-            document.getElementById("expressprice").innerHTML = 5;
-            document.getElementById("express").classList.add("is-active");
+            expressprice.innerHTML = 5;
+            express.classList.add("is-active");
         } else {
-            document.getElementById("express").classList.remove("is-active");
+            express.classList.remove("is-active");
         }
 
 
