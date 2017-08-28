@@ -60,6 +60,10 @@ select {
   border-radius: 6px;
   padding: 5px; }
 
+select:focus option:checked,
+select option:checked {
+  background: #DF644A linear-gradient(0deg, #DF644A 0%, #DF644A 100%); }
+
 input[type="text"] {
   height: 30px; }
 
@@ -255,4 +259,5 @@ select {
   text-transform: uppercase; }
 
 .summary > strong + span {
+  color: #567238;
   font-size: 1.3em; }

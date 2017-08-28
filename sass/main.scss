@@ -70,6 +70,11 @@ select {
     padding: 5px;
 }
 
+select:focus option:checked,
+select option:checked {
+    background: $color linear-gradient(0deg, $color 0%, $color 100%);
+}
+
 input[type="text"] {
     height: 30px;
 }
@@ -305,6 +310,7 @@ select {
         margin: 0 15px 0 0;
         text-transform: uppercase;
         +span {
+            color: #567238;
             font-size: 1.3em;
         }
     }
