@@ -1,0 +1,44 @@
+@charset "utf-8";
+html {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: teal;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    height: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden;
+}
+
+.value-container {
+    display: none;
+}
+
+.value-container.is-active {
+    display: block;
+}
+
+.container {
+    background-color: #fff;
+    display: block;
+    max-width: 500px;
+    padding: 20px;
+}
+
+.input {
+    clear: both;
+    display: block;
+}
+
+label,
+input[type="text"],
+select {
+    width: 100%;
+}
