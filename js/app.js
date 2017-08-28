@@ -15,14 +15,14 @@
     //     return !isNaN(parseFloat(n)) && isFinite(n);
     // }
 
-    // function isActiveValue(item, container, contValue) {
-    //     if (item.checked) {
-    //         container.classList.add("is-active");
-    //         contValue.innerHTML = item.value;
-    //     } else {
-    //         container.classList.remove("is-active");
-    //     }
-    // }
+    function isActiveChecked(item, val, container, contValue) {
+        if (document.getElementById(item).checked) {
+            document.getElementById(contValue).classList.add("is-active");
+            document.getElementById(container).innerHTML = val;
+        } else {
+            document.getElementById(contValue).classList.remove("is-active");
+        }
+    }
 
     //function isChecked() {
 
@@ -108,7 +108,6 @@
             }
         }
         if (drinks[0].checked || drinks[1].checked || drinks[2].checked || drinks[3].checked || drinks[4].checked) {
-            //console.log(drinks[0].checked)
             drinksprice.innerHTML = count2;
             drinks2.classList.add("is-active");
         } else {
@@ -116,12 +115,7 @@
         }
 
         //shipping
-        if (shippYes.checked) {
-            document.getElementById("shippingprice").innerHTML = 1;
-            document.getElementById("shipping-container").classList.add("is-active");
-        } else {
-            document.getElementById("shipping-container").classList.remove("is-active");
-        }
+        isActiveChecked('yes', 1, "shippingprice", "shipping-container");
 
         //destination
         var destVal = dest.options[dest.selectedIndex].value;
@@ -134,12 +128,7 @@
         }
 
         //fast shipping - hungry
-        if (hungry.checked) {
-            expressprice.innerHTML = 5;
-            express.classList.add("is-active");
-        } else {
-            express.classList.remove("is-active");
-        }
+        isActiveChecked('hungry', 5, "expressprice", "express");
 
 
         result.innerHTML = +(sizeVal * amount.value) + +count + +count2 + (extra.value ? 5 : 0) + +(shippYes.checked ? 5 : 0) + +destVal + +(hungry.checked ? 5 : 0);
